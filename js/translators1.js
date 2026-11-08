@@ -232,29 +232,6 @@ function initVerification() {
   });
 }
 
-// function showVerifyResult(container, translator, query) {
-//   container.classList.add('show');
-
-//   if (translator) {
-//     container.className = 'verify-result show success';
-//     container.innerHTML = `
-//       <div class="verify-result-icon">✅</div>
-//       <h4>Verified — Registration Found</h4>
-//       <p><strong>Name:</strong> ${translator.name}</p>
-//       <p><strong>Registration:</strong> ${translator.regNumber}</p>
-//       <p><strong>Address:</strong> ${translator.address}</p>
-//       <p><strong>Languages:</strong> ${[translator.lang1, translator.lang2].filter(Boolean).join(' | ')}</p>`;
-//   } else {
-//     container.className = 'verify-result show error';
-//     container.innerHTML = ```
-//       <div class="verify-result-icon">❌</div>
-//       <h4>Not Found</h4>
-//       <p>No translator found with registration number "${query}".</p>
-//       <p>Please check the number and try again, or contact the administration.</p>
-//       <p>if you're a translator and not found in this database please send your details.</p>```;
-//   }
-// }
-
 function showVerifyResult(container, translator, query) {
   container.classList.add('show');
 
@@ -269,10 +246,33 @@ function showVerifyResult(container, translator, query) {
       <p><strong>Languages:</strong> ${[translator.lang1, translator.lang2].filter(Boolean).join(' | ')}</p>`;
   } else {
     container.className = 'verify-result show error';
-    container.innerHTML = `
+    container.innerHTML = ```
       <div class="verify-result-icon">❌</div>
       <h4>Not Found</h4>
       <p>No translator found with registration number "${query}".</p>
-      <p>Please check the number and try again, or contact the administration.If you are a translator and not found in this database, please <a href="#">send your details.</a></p>`;
+      <p>Please check the number and try again, or contact the administration.</p>
+      <p>if you're a translator and not found in this database please send your details.</p>```;
   }
 }
+
+// function showVerifyResult(container, translator, query) {
+//   container.classList.add('show');
+
+//   if (translator) {
+//     container.className = 'verify-result show success';
+//     container.innerHTML = `
+//       <div class="verify-result-icon">✅</div>
+//       <h4>Verified — Registration Found</h4>
+//       <p><strong>Name:</strong> ${translator.name}</p>
+//       <p><strong>Registration:</strong> ${translator.regNumber}</p>
+//       <p><strong>Address:</strong> ${translator.address}</p>
+//       <p><strong>Languages:</strong> ${[translator.lang1, translator.lang2].filter(Boolean).join(' | ')}</p>`;
+//   } else {
+//     container.className = 'verify-result show error';
+//     container.innerHTML = `
+//       <div class="verify-result-icon">❌</div>
+//       <h4>Not Found</h4>
+//       <p>No translator found with registration number "${query}".</p>
+//       <p>Please check the number and try again, or contact the administration.If you are a translator and not found in this database, please <a href="#">send your details.</a></p>`;
+//   }
+// }
