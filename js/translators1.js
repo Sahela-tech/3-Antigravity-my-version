@@ -273,7 +273,6 @@ function showVerifyResult(container, translator, query) {
       <div class="verify-result-icon">❌</div>
       <h4>Not Found</h4>
       <p>No translator found with registration number "${query}".</p>
-      <p>Please check the number and try again, or contact the administration.</p>
-      <p>If you are a translator and not found in this database, please <a href="contact.html">send your details</a>.</p>`;
+      <p>Please check the number and try again, or contact the administration.If you are a translator and not found in this database, please <a href="#">send your details.</a></p>`;
   }
 }
